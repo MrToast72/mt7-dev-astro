@@ -1,0 +1,27 @@
+{
+  "name": "mt7-dev-astro",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/markdoc": "^0.4.4",
+    "@astrojs/prism": "^2.1.2",
+    "@types/hammerjs": "^2.0.41",
+    "astro": "^2.9.6",
+    "astro-compress": "^2.0.12",
+    "astro-icon": "^0.8.1",
+    "prism": "^4.1.2",
+    "remark": "^14.0.3",
+    "remark-toc": "^8.0.1",
+    "shiki": "^0.14.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.3.2"
+  }
+}

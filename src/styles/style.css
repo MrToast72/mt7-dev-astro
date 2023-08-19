@@ -1,0 +1,400 @@
+/* Define the Nord color palette, as well as some global variables */
+:root {
+  /* Nord Theme settings start */
+  --nord-0: #2e3440;
+  --nord-1: #3b4252;
+  --nord-2: #434c5e;
+  --nord-3: #4c566a;
+  --nord-4: #d8dee9;
+  --nord-5: #e5e9f0;
+  --nord-6: #eceff4;
+  --nord-7: #8fbcbb;
+  --nord-8: #88c0d0;
+  --nord-9: #81a1c1;
+  --nord-10: #5e81ac;
+  --nord-11: #bf616a;
+  --nord-12: #d08770;
+  --nord-13: #ebcb8b;
+  --nord-14: #a3be8c;
+  --nord-15: #b48ead;
+  /* Nord Theme settings end */
+  /* Social Media Button Theme Start */
+  --twitter: #1da1f2;
+  --twitterHover: #0e71b8;
+  --instagram: #e1306c;
+  --instagramHover: #b3315c;
+  --github: #333;
+  --githubHover: #2b2b2b;
+  --twitch: #6441a5;
+  --twitchHover: #4b367c;
+  --youtube: #ff0000;
+  --youtubeHover: #a00000;
+  --discord: #7289da;
+  --discordHover: #5b6cac;
+  --steam: #000000;
+  --steamHover: #171a21;
+  --spotify: #1db954;
+  --spotifyHover: #128139;
+  /* Social Media Button Theme End */
+  --transition: 0.1s ease-in-out;
+  --boxShadow: rgba(0, 0, 0, 0.2) 0 3px 5px -1px,
+    rgba(0, 0, 0, 0.14) 0 6px 10px 0, rgba(0, 0, 0, 0.12) 0 1px 10px 0;
+  --boxShadowSelected: rgba(255, 255, 255, 0.2) 0 3px 5px -1px,
+    rgba(255, 255, 255, 0.14) 0 6px 10px 0,
+    rgba(255, 255, 255, 0.12) 0 1px 18px 0;
+  --textShadow: 0px 3px 3px rgba(0, 0, 0, 0.4), 0px 5px 5px rgba(0, 0, 0, 0.1),
+    0px 5px 23px rgba(0, 0, 0, 0.1);
+  --textShadowLM: 0px 2px 3px rgba(0, 0, 0, 0.4), 0px 4px 7px rgba(0, 0, 0, 0.1),
+    0px 9px 11px rgba(0, 0, 0, 0.1);
+}
+
+@font-face {
+  font-family: "Fira Code";
+  src: url("/fonts/FiraCode-VariableFont_wght.ttf") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Carter One";
+  src: url("/fonts/CarterOne-Regular.ttf") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+/* Define the box style, margins, and padding for all divs and elements */
+* {
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: var(--nord-3) var(--nord13);
+}
+/* Define the scrollbar style */
+::-webkit-scrollbar {
+  width: 10px;
+  scrollbar-color: var(--nord-3) var(--nord13);
+}
+/* Define the body */
+body {
+  margin: 0;
+  font-family: "Fira Code";
+  background-color: var(--nord-1);
+  color: var(--nord-6);
+}
+
+/* Define the grid container */
+#siteGrid {
+  display: grid;
+  grid-template-columns: 2fr;
+  grid-template-rows: 60px 1fr auto;
+  grid-template-areas:
+    "header header header"
+    "main main main"
+    "footer footer footer";
+  grid-gap: 0px;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Define the header */
+#siteHeader {
+  grid-area: header;
+  background-color: var(--nord-1);
+  display: grid;
+  width: 100%;
+  border-bottom: 2px solid var(--nord-3);
+  position: fixed;
+  z-index: 1;
+  top: 0;
+}
+.headerDiv {
+  display: flex;
+}
+
+/* Define the main area */
+#siteMain {
+  background-color: var(--nord-1);
+  color: var(--nord-4);
+  grid-area: main;
+}
+
+code {
+  background-color: var(--nord-2);
+  color: var(--nord-8);
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.3em;
+}
+
+.boxHieghtMargin {
+  margin: 0 0 25vh 0;
+}
+
+main {
+  margin-left: 18vw;
+  margin-right: 18vw;
+}
+
+/*
+========================================================
+            Social Media Buttons Section
+========================================================
+*/
+/* Social Media Buttons Above SiteHeader */
+.socialsTop {
+  margin: auto 0 auto auto;
+  display: flex;
+}
+
+/* Social Media Buttons Below SiteHeader */
+.socialsMobile {
+  display: none;
+}
+
+/* Defines the Social Media Block Buttons */
+.socialButtons {
+  box-shadow: var(--boxShadow);
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  margin: 0px 2px;
+  transition: background-color ease-out 120ms;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+/* Defines the Social Media Block Button Hover */
+.socialButtons:hover {
+  box-shadow: var(--textShadow);
+}
+
+/* Social Media Block Images */
+.buttonImages {
+  width: 25px;
+  height: 25px;
+  color: black;
+}
+
+/* 
+==========================================================
+            Begining of site Main settings
+==========================================================
+*/
+
+/* Main Content Div */
+.mainContent {
+  gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 2fr));
+}
+
+/* Main content boxes */
+.contentBoxes {
+  display: block;
+  box-shadow: var(--boxShadow);
+  border: 1px solid var(--nord-3);
+  background-color: var(--nord-0);
+  padding: 16px;
+  border-radius: 0.3em;
+  transition: box-shadow ease-out 120ms;
+}
+
+.contentBoxes:hover,
+.blogContentBoxes:hover {
+  transition: box-shadow ease-out 120ms;
+  box-shadow: var(--boxShadowSelected);
+}
+
+.blogContentBoxes {
+  display: block;
+  box-shadow: var(--boxShadow);
+  border: 1px solid var(--nord-3);
+  background-color: var(--nord-0);
+  padding: 16px;
+  margin: 2rem 0rem 2rem 0rem;
+  border-radius: 0.3em;
+}
+
+/* Main Content Titles */
+.contentTitles {
+  border-bottom: 1px solid var(--nord-3);
+  padding-bottom: 10px;
+  color: var(--nord-6);
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+/* Main Content Text */
+.contentText {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: var(--nord-6);
+  text-decoration: none;
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* Content block that spans 2 columns */
+.gridColumnSpan2 {
+  grid-column: span 2;
+}
+
+.blogTitles,
+.projectTitles,
+.walkThroughTitles {
+  color: var(--nord-6);
+}
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: var(--nord-12);
+}
+a:hover {
+  text-decoration: none;
+  color: var(--nord-13);
+}
+
+/* Mobile Media Queries */
+@media only screen and (max-width: 768px) {
+  /* Define the grid container for Mobile */
+  #siteGrid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 86px 1fr auto;
+    grid-template-areas:
+      "header header"
+      "main main"
+      "footer footer";
+    grid-gap: 0px;
+    min-height: 100vh;
+    width: 100%;
+  }
+
+  /* Define the header */
+
+  .headerDiv {
+    display: inline-flex;
+    justify-content: left;
+    text-align: center;
+  }
+
+  /* Define the menu button */
+  #menuButton {
+    padding-bottom: 5px;
+    padding-left: 5px;
+    margin: auto 0 auto 0;
+    font-size: 50px;
+  }
+
+  main {
+    margin-left: 2vw;
+    margin-right: 2vw;
+    margin-top: 1vh;
+  }
+
+  /* Defines the Social Media Block Buttons */
+  .socialButtons {
+    width: 50px;
+    height: 50px;
+  }
+
+  /* Social Media Block Divs */
+  .buttonLinks {
+    margin: 10px auto 10px auto;
+  }
+
+  /* Social Media Block Images */
+  .buttonImages {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* Social Media Block Top Div */
+  .socialsTop {
+    display: none;
+  }
+
+  /* Social Media Block Mobile Div */
+  .socialsMobile {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Main Content Div */
+  .mainContent {
+    display: block;
+    margin: 15px;
+  }
+
+  /* Main content boxes */
+  .contentBoxes {
+    min-width: none;
+    margin: 15px 0px 15px 0px;
+  }
+
+  /* Menu Text */
+  #menu ul li a {
+    font-size: 40px;
+  }
+
+  /* Menu Div */
+  #menu {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--nord-0);
+    z-index: 1;
+    transform: translateX(-100vw);
+    transition: transform 0.3s ease-in-out;
+  }
+}
+
+/* Light Mode Theme Settings */
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: var(--nord-4);
+    color: var(--nord-1);
+  }
+
+  #siteHeader {
+    background-color: var(--nord-4);
+    border-bottom: 2px solid var(--nord-6);
+  }
+
+  /* Define the main area */
+  #siteMain {
+    background-color: var(--nord-4);
+    color: var(--nord-0);
+  }
+
+  /* Social Media Block Buttons */
+  .contentBoxes {
+    border: 1px solid var(--nord-3);
+    background-color: var(--nord-6);
+  }
+
+  .contentText {
+    color: var(--nord-0);
+  }
+
+  .contentTitles {
+    color: var(--nord-0);
+  }
+
+  .blogContentBoxes {
+    background-color: var(--nord-5);
+  }
+
+  code {
+    background-color: var(--nord-3);
+    color: var(--nord-9);
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.3em;
+  }
+  .blogTitles,
+  .projectTitles,
+  .walkThroughTitles {
+    color: var(--nord-0);
+  }
+}

@@ -1,0 +1,74 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/style.css';
+---
+
+<Layout title="About">
+  <div class="mainContent">
+  <div class="aboutLayout">
+    <div class="aboutBoxes gridColumnSpan2">
+      <h2 class="contentTitles">About Me And This Blog:</h2>
+      <p class="contentText">Hiya, my name is Dorian or as most people call me, MrToast72. I am not quite a full stack developer, but I am quickly getting there.</p>
+      <p class="contentText">Current languages under my belt: C++, Python, JS, HTML, CSS, Astro, Docker, and Git, with more being added every day. </p>
+      <p class="contentText">I created this blog to track my cyber 
+        security/hacking journey as well as my slef-hosting journey, and to help others who are interested in the same field. 
+        I am currently a student at the University of Regina for my Bachelors in Computer Science, so I hope to pass on some of my knowledge
+        I learn throughout my degree.
+      </p>
+      <p class="contentText">I started down the path of self-hosting/tinkering about 4+ years ago when many companys started moving
+        to subscriptions for everything. I never wanted to pay for someone to host my data in the first place, let alone host it
+        and then make money off of me. So I started to look into self-hosting and found that it was a lot easier than
+        I thought it would be. I started with a simple Nextcloud server to host my own files and access them remotly, reverse proxy, 
+        and a few other things. Next, I worked on hosting a password manager so I wouldn't have to pay for Dashlane any longer. After
+        that, I went after any and all apps I use that I could host myself. I now have a fully functional self-hosted server that I use
+        for everything I need. I hope to share my knowledge and experience with others so they can do the same.
+      </p>
+      <p class="contentText">This blog is still relitively new, so more information and articles are to come!</p>
+    </div>
+
+    <div class="aboutBoxes gridColumnSpan2">
+      <h2 class="contentTitles">Contact Methods</h2>
+      <p class="contentText">Until this website is fully done, contact methods will be rather rudimentary.
+        Below you will find a few different methods of contacting me, and I will try to respond as soon as possible.
+      </p>
+      
+      <p class="contentText contactLinks">Twitter: <a class="contactLinks" href="https://twitter.com/mrtoast72" target="_blank">@MrToast72</a></p>
+      <p class="contentText contactLinks">Discord: <a class="contactLinks" href="https://discordapp.com/users/144671309111099392" target="_blank">MrToast72</a></p>
+    </div>
+  </div>
+</div>
+	
+</Layout>
+
+<style>
+  #emailObfuscated {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+  }
+  .aboutLayout {
+    display: grid;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .aboutBoxes {
+    display: block;
+    box-shadow: var(--boxShadow);
+    border: 1px solid var(--nord-3);
+    background-color: var(--nord-0);
+    padding: 16px;
+    border-radius: 0.3em;
+    transition: box-shadow ease-out 120ms;
+  }
+
+/* Light Mode Theme Settings */
+@media (prefers-color-scheme: light) {
+  .aboutBoxes {
+    background-color: var(--nord-5);
+  }
+
+  a:link, p a:visited, p a:hover, p a:active {
+    color: var(--nord-10);
+  }
+}
+</style>

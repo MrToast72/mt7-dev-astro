@@ -1,0 +1,57 @@
+---
+---
+
+<div class="siteTitle">
+  <a class="homeLink" href="/">
+    <h2 class="toastyBlog">Toasty Blog</h2>
+  </a>
+</div>
+
+<style>
+  /* Actual Website Title Text */
+  .toastyBlog {
+    text-shadow: var(--textShadow);
+    color: var(--nord-13);
+    font-family: "Carter One", sans-serif;
+    font-size: 30px;
+    transition: 0.1s ease-in-out;
+    margin: 0;
+    padding: 0;
+  }
+  .toastyBlog:hover {
+    color: var(--nord-6);
+    transition: 0.1s ease-in-out;
+  }
+
+  /* Site Title Div */
+  .siteTitle {
+    margin: 5px 25px auto 20px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    /* Actual Website Title Text */
+    .toastyBlog {
+      font-size: 45px;
+    }
+
+    /* Site Title Div */
+    .siteTitle {
+      margin: 10px 25px 5px 20px;
+    }
+  }
+  /* Light Mode Theme Settings */
+  @media (prefers-color-scheme: light) {
+    /* Actual Website Title Text */
+    .toastyBlog {
+      text-shadow: none;
+      color: var(--nord-1);
+      transition: 0.1s ease-in-out;
+    }
+
+    .toastyBlog:hover {
+      color: var(--nord-13);
+      text-shadow: var(--textShadow);
+      transition: 0.1s ease-in-out;
+    }
+  }
+</style>

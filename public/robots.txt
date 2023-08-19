@@ -1,0 +1,20 @@
+User-agent: *
+Disallow: /private/
+Disallow: /restricted/
+Disallow: /hidden/
+Disallow: /sensitive-data/
+Disallow: /admin/
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /temp/
+Disallow: /uploads/
+Disallow: /download/
+Disallow: /*?*
+Disallow: /*.pdf$
+Disallow: /*.doc$
+Disallow: /*.txt$
+Disallow: /*.zip$
+Disallow: /*.rar$
+
+User-agent: OpenAI-GPT
+Disallow: /

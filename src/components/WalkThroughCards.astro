@@ -1,0 +1,10 @@
+---
+const allPosts = await Astro.glob('../pages/walkthroughs/*.md');
+---
+
+{allPosts.map((post) => (
+	<a href={post.frontmatter.href} class="blogContentBoxes">
+		<h2 class="contentTitles">{post.frontmatter.title}</h2>
+		<p class="contentText">{post.frontmatter.discription}</p>
+	</a>
+))}

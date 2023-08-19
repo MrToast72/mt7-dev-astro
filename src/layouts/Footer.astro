@@ -1,0 +1,57 @@
+<footer class="footer" id="siteFooter">
+
+    <p class="reservedText">ALL RIGHTS RESERVED</p>
+    <p class="copyrightText">© 2023 MrToast72</p>
+
+</footer>  
+
+
+<style>
+/* Define the footer */
+#siteFooter {
+  background-color: var(--nord-0);
+  color: var(--nord-7);
+  grid-area: footer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}
+/* Site Footer Div */
+.footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 5vh;
+}
+
+/* Footer Text */
+.footer p {
+  font-size: 12px;
+  color: var(--nord-5);
+  margin-left: 2em;
+  margin-right: 2em;
+}
+.reservedText, .copyrightText {
+  padding: 0;
+}
+
+/* Light Mode Theme Settings */
+@media (prefers-color-scheme: light) {
+
+  /* Define the footer */
+  #siteFooter {
+    background-color: var(--nord-4);
+    color: var(--nord-0);
+    border-top: 2px solid var(--nord-6)
+  }
+
+  /* Footer Text */
+  .footer p {
+  color: var(--nord-0);
+  }
+
+
+}
+
+</style>

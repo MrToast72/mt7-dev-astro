@@ -1,0 +1,79 @@
+.discord {
+background-color: var(--discord);
+color: var(--nord-4);
+margin-right: 5px;
+}
+
+.discord:hover {
+background-color: var(--discordHover);
+}
+
+.github {
+background-color: var(--github);
+color: var(--nord-4);
+margin-right: 5px;
+}
+
+.github:hover {
+background-color: var(--githubHover);
+}
+
+.instagram {
+background-color: var(--instagram);
+color: var(--nord-4);
+margin-right: 5px;
+}
+
+.instagram:hover {
+background-color: var(--instagramHover);
+}
+
+.spotify {
+background-color: var(--spotify);
+color: var(--nord-4);
+margin-right: 5px;
+}
+
+.spotify:hover {
+background-color: var(--spotifyHover);
+}
+
+.steam {
+background-color: var(--steam);
+color: var(--nord-4);
+margin-right: 5px;
+}
+
+.steam:hover {
+background-color: var(--steamHover);
+}
+
+.twitch {
+background-color: var(--twitch);
+color: var(--nord-4);
+margin-right: 5px;
+}
+
+.twitch:hover {
+background-color: var(--twitchHover);
+}
+
+.twitter {
+background-color: var(--twitter);
+color: var(--nord-4);
+margin-right: 5px;
+}
+
+.twitter:hover {
+background-color: var(--twitterHover);
+}
+
+.youtube {
+background-color: var(--youtube);
+color: var(--nord-4);
+margin-right: 5px;
+}
+
+.youtube:hover {
+background-color: var(--youtubeHover);
+}

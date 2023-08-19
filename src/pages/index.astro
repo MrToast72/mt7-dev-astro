@@ -1,0 +1,69 @@
+---
+import Layout from '../layouts/Layout.astro';
+import FrontPageCards from '../components/FrontBlogCards.astro';
+import '../styles/style.css';
+import BioContent from '../layouts/BioContent.astro';
+import FrontProjectCards from '../components/FrontProjectCards.astro';
+import FrontWalkthroughCards from '../components/FrontWalkthroughCards.astro';
+---
+
+<Layout title="Home">
+
+	<BioContent />
+
+	<div class="blogContentTitle">
+		<h1 class="headings">Blog Posts:</h1>
+	</div>
+
+	<div class="blogBoxes boxHieghtMargin">
+		<FrontPageCards />
+	</div>
+
+	<div class="projectContentTitle">
+		<h1 class="headings">Projects:</h1>
+	</div>
+
+	<div class="projectBoxes boxHieghtMargin">
+		<FrontProjectCards />
+	</div>
+
+	<div class="walkContentTitle">
+		<h1 class="headings">Walk Throughs:</h1>
+	</div>
+
+	<div class="walkBoxes boxHieghtMargin">
+		<FrontWalkthroughCards />
+	</div>
+</Layout>
+
+<style>
+	.blogBoxes, .projectBoxes, .walkBoxes {
+		gap: 2rem;
+		display: grid;  
+		grid-template-columns: repeat(auto-fit, minmax(250px, 2fr));
+	}
+	.blogContentTitle, .projectContentTitle, .walkContentTitle {
+		margin: 0 0 2vh 0;
+	}
+	.headings {
+		margin: 0;
+		color: var(--nord-6);
+	}
+
+	@media only screen and (max-width: 768px) {
+		.blogBoxes, .projectBoxes, .walkBoxes {
+			display: block;
+    		margin: 2.5rem 1rem 10rem 1rem;
+		}
+
+		.blogContentTitle, .projectContentTitle, .walkContentTitle {
+			margin: 1rem;
+		}
+	}
+
+	@media (prefers-color-scheme: light) {
+		.headings {
+			color: var(--nord-0);
+	}
+	}
+</style>

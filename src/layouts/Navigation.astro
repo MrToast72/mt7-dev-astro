@@ -1,0 +1,229 @@
+---
+
+---
+
+  <!-- Hamburger icon -->
+  <input class="side-menu" type="checkbox" id="side-menu"/>
+  <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+
+  <!-- Navigation Menu -->
+  <nav class="nav">
+    <ul class="menu">
+      <li><a class="navigationLinks" href="/about">About Me</a></li>
+
+      <li><a class="navigationLinks" href="/blog">Blog</a></li>
+
+      <li><a class="navigationLinks" href="/projects">Projects</a></li>
+
+      <li><a class="navigationLinks" href="/walkthroughs">Walk Throughs</a></li>
+    </ul>
+  </nav>
+
+
+<style>
+.navigationLinks {
+  margin: 0px auto 0px auto;
+  text-shadow: var(--textShadow);
+  color: var(--nord-6);
+  font-family: 'Carter One';
+  font-size: 18px;
+  display: block;
+  transition: 0.1s ease-in-out;
+  
+}
+.navigationLinks:link, .navigationLinks:visited, .navigationLinks:active {
+  text-decoration: none;
+  color: var(--nord-6);
+}
+.navigationLinks:hover {
+  text-decoration: none;
+  color: var(--nord-13);
+}
+ul{
+    list-style: none;
+}
+
+
+/* 
+=================================================================
+            Navigation Menu and Hamburger Section
+=================================================================
+*/
+/* Navigation menu and links */
+.nav {
+    width: 100%;
+    top: 54px;
+    position: fixed;
+    overflow: hidden;
+    display: none;
+    transition: max-height .5s ease-out;
+    background-color: var(--nord-1);
+}
+
+.menu {
+  margin: 0;
+  padding: 0;
+  
+}
+
+/* Un-Ordered List Menu Selection */
+.menu a {
+    display: block;
+    padding: 15px;
+    color: var(--white);
+    font-size: 20px;
+}
+
+/* Un-Ordered List Menu Hover Selection */
+.menu a:hover {
+    background-color: var(--nord-13);
+}
+
+/* Menu Icon */
+.hamb {
+    cursor: pointer;
+    display: flex;
+    margin: 2px 20px 0px 0px;
+    z-index: 11;
+    height: 50px;
+    width: 50px;
+    justify-content: center;
+    padding-top: 25px;
+}/* Style label tag */
+
+/* Menu Lines */
+.hamb-line {
+    background: var(--nord-6);
+    display: block;
+    height: 3px;
+    position: relative;
+    width: 24px;
+    z-index: 10;
+    box-sizing: content-box;
+    justify-content: center;
+
+} /* Style span tag */
+
+/* Menu Lines and Animations */
+.hamb-line::before,
+.hamb-line::after {
+    background: var(--nord-6);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+/* Top hamburger line */
+.hamb-line::before {
+    top: 10px;
+}
+/* Bottom hamburger line */
+.hamb-line::after {
+    top: -10px;
+}
+
+/* Hide checkbox */
+.side-menu {
+    display: none;
+}
+
+/* Toggle menu icon animation using checked box */
+.side-menu:checked ~ nav {
+    display: block;
+}
+.side-menu:checked ~ .hamb .hamb-line {
+    background: transparent;
+}
+.side-menu:checked ~ .hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top:0;
+}
+.side-menu:checked ~ .hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top:0;
+}
+
+/* Normally media inuqires work when the screen shrinks, these are always set unless the screen gets smaller using min-width.
+Effectivly these are always set and the settings above regarding the navigation are turned on when these turn off after going
+below the 768px. */
+@media only screen and (min-width: 965px) {
+
+.nav{
+    max-height: 60px; /* Adjust the max-height for larger screens */
+    top: 0;
+    position: relative;
+    float: right;
+    width: fit-content;
+    display: flex;
+    background-color: transparent;
+}
+.menu li{
+    float: left;
+    
+}
+.menu a:hover{
+    color: var(--textHighlight);
+    transition: 0.1s ease-in-out;
+    background-color: transparent;
+    color: var(--nord-13);
+}
+.hamb{
+    display: none;
+}
+
+
+}
+
+@media only screen and (max-width: 768px){
+  .hamb {
+    margin: 20px 20px 0px auto;
+    float: right;
+  }
+
+  .nav {
+    top: 83px;
+}
+}
+
+
+/* Light Mode Theme Settings */
+@media (prefers-color-scheme: light) {
+  /* Define the menu */
+  .menu, .nav {
+    background-color: var(--nord-4);
+    text-shadow: none;
+  }
+
+  .nav ul li a {
+    transition: 0.1s ease-in-out;
+  }
+
+  .nav ul li a:hover {
+    color: var(--nord-13);
+    text-shadow: var(--textShadow);
+    transition: 0.1s ease-in-out;
+  }
+
+  /* Menu Text */
+  .menu ul li a {
+    color: var(--nord-0);
+    text-shadow: none;
+  }
+  
+  /* Define the menu button */
+  .hamb-line, .hamb-line::before, .hamb-line::after {
+    background: var(--nord-1);
+    text-shadow: none;
+    box-shadow: none;
+  }
+
+  .navigationLinks:link, .navigationLinks:visited, .navigationLinks:active {
+    color: var(--nord-0);
+    text-shadow: none;
+  }
+  
+}
+
+</style>
